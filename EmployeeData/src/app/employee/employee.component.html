@@ -1,0 +1,33 @@
+<div>
+    <label for="filter">Filter by: </label>
+    <input type="text" id="filter" [(ngModel)]="filterBy" />
+  </div>
+
+
+<div class="table-div">
+    <table>
+        <thead>
+            <tr>
+                <th>{{heading.id}}</th>
+                <th>{{heading.name}}</th>
+                <th>{{heading.email}}</th>
+                <th>{{heading.date}}</th>
+                <th>{{heading.action}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let info of tdata | search: filterBy:'name'">
+                <td>{{info.id}}</td>
+                <td>{{info.name}}</td>
+                <td>{{info.email}}</td>
+                <td>{{info.date | date: "shortDate"}}</td>
+                <td>
+                    <button>Edit</button>
+                    <button>Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>
+
