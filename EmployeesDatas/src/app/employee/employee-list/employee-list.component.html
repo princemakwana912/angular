@@ -1,0 +1,14 @@
+<section>
+    <!-- <ul>
+        <li><a routerLink="/prince" routerLinkActive="router-link-active" >Prince</a></li>
+        <li><a routerLink="/praveen" routerLinkActive="router-link-active" >Praveen</a></li>
+        <li><a routerLink="" routerLinkActive="router-link-active" >Raj</a></li>
+    </ul> -->
+    <ul>
+        <div *ngFor="let data of personDetail">
+            <li>
+                <a routerLink="/emp-list/{{data.id}}/{{data.name}}">{{data.name}}</a>
+            </li>
+        </div>
+    </ul>
+</section>
