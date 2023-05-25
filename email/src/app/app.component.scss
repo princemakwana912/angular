@@ -1,0 +1,13 @@
+.form-container{
+    background-color: antiquewhite;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
